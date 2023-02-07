@@ -36,7 +36,7 @@ const hangmanEstructure = (
     />
   </>
 );
-const head = (
+const HEAD = (
   <div
     style={{
       width: "50px",
@@ -49,7 +49,7 @@ const head = (
     }}
   />
 );
-const body = (
+const BODY = (
   <div
     style={{
       width: "10px",
@@ -61,7 +61,7 @@ const body = (
     }}
   />
 );
-const rightArm = (
+const RIGHT_ARM = (
   <div
     style={{
       width: "70px",
@@ -75,7 +75,7 @@ const rightArm = (
     }}
   />
 );
-const leftArm = (
+const LEFT_ARM = (
   <div
     style={{
       width: "70px",
@@ -89,7 +89,7 @@ const leftArm = (
     }}
   />
 );
-const rightLeg = (
+const RIGHT_LEG = (
   <div
     style={{
       width: "100px",
@@ -103,7 +103,7 @@ const rightLeg = (
     }}
   />
 );
-const leftLeg = (
+const LEFT_LEG = (
   <div
     style={{
       width: "100px",
@@ -117,16 +117,16 @@ const leftLeg = (
     }}
   />
 );
+const BODY_PARTS = [HEAD, BODY, RIGHT_ARM, LEFT_ARM, RIGHT_LEG, LEFT_LEG];
 
-export const HangmanDrawing = () => {
+export const HangmanDrawing = ({
+  numberOfGuesses,
+}: {
+  numberOfGuesses: number;
+}) => {
   return (
     <div style={{ position: "relative" }}>
-      {head}
-      {body}
-      {rightArm}
-      {leftArm}
-      {rightLeg}
-      {leftLeg}
+      {BODY_PARTS.slice(0, numberOfGuesses)}
       {hangmanEstructure}
     </div>
   );

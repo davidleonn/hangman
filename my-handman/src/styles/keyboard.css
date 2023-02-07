@@ -1,4 +1,4 @@
-.btn {
+.button {
   width: 100%;
   border: 3px solid black;
   background: none;
@@ -9,18 +9,18 @@
   font-weight: bold;
   cursor: pointer;
   color: black;
+}
 
-  &__active {
-    background-color: hsl(200, 100%, 50%);
-    color: white;
-  }
+.button.active {
+  background-color: hsl(138, 58%, 59%);
+  color: white;
+}
 
-  &__inactive {
-    opacity: 0.3;
-  }
+.button.inactive {
+  opacity: 0.3;
+}
 
-  &:hover:not(:disabled),
-  &:focus:not(:disabled) {
-    background-color: hsl(200, 100%, 75%);
-  }
+.button:hover:not(:disabled),
+.button:focus:not(:disabled) {
+  background-color: hsl(200, 100%, 75%);
 }
